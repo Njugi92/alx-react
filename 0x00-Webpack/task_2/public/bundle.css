@@ -1,0 +1,16 @@
+#logo {
+    width: 200px;
+    height: 200px;
+    background: url(a3595f9446453b16b6bc.jpg) no-repeat;
+    background-size: cover;
+  }
+  
+  #startBtn {
+    display: inline-block;
+  }
+  
+  #count {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
