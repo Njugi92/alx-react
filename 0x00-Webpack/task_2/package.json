@@ -4,20 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:webpack && npm run build:css",
-    "build:webpack": "webpack",
-    "build:css": "webpack --config webpack.config.js"
+    "dev": "webpack --mode development",
+    "build": "webpack"
   },
   "keywords": [
-    "asset",
-    "compilation",
-    "entry",
-    "points",
+    "asset_compilation",
+    "entry_points",
     "javascript",
     "loaders",
     "output",
-    "webpack",
-    "plugins"
+    "webpack_plugins"
   ],
   "author": "ken karuma",
   "license": "ISC",
