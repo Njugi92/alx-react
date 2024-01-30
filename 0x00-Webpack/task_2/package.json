@@ -21,6 +21,7 @@
   "devDependencies": {
     "css-loader": "^6.9.1",
     "file-loader": "^6.2.0",
+    "image-webpack-loader": "^8.1.0",
     "mini-css-extract-plugin": "^2.7.7",
     "style-loader": "^3.3.4",
     "webpack": "^5.90.0",
