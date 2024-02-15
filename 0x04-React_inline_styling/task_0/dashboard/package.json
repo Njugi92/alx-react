@@ -1,7 +1,6 @@
 {
   "name": "dashboard",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --config config/webpack.config.js",
@@ -16,7 +15,6 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.1.9",
-    "chai": "^4.3.4",
     "css-loader": "^5.2.6",
     "file-loader": "^6.2.0",
     "image-webpack-loader": "^7.0.1",
@@ -30,7 +28,6 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "*",
     "enzyme": "^3.11.0",
@@ -41,8 +38,6 @@
     "webpack-dev-server": "^3.11.2"
   },
   "jest": {
-    "verbose": true,
-    "clearMocks": true,
     "setupFiles": [
       "<rootDir>/config/setupTests.js"
     ],
@@ -50,5 +45,6 @@
       "\\.(css|sass)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(jpg|jpeg|png|gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
     }
-  }
+  },
+  "description": ""
 }

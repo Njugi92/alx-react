@@ -4,15 +4,15 @@ const WithLogging = (WrappedComponent) => {
     return class extends Component {
         constructor(props) {
             super(props);
-            this.displayName = WrappedComponent.name ? `WithLogging(${WrappedComponent.name})` : `WithLogging(Component)`;
+            this.displayName = `WithLogging(${WrappedComponent.displayName || Component})`;
         }
 
         componentDidMount() {
-            console.log(`Component ${WrappedComponent.name ? WrappedComponent.name : 'Component'} is mounted`);
+            console.log(`Component ${WrappedComponent.displayName} is mounted`);
         }
 
         componentWillUnmount() {
-            console.log(`Component ${WrappedComponent.name ? WrappedComponent.name : 'Component'} is going to unmount`);
+            console.log(`Component ${WrappedComponent.displayName} is going to unmount`);
         }
         
         render() {
