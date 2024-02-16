@@ -1,9 +1,14 @@
 import React from 'react'; 
 import PropTypes from 'prop-types'
+import { css, StyleSheet } from 'aphrodite';
 import BodySection from './BodySection';
-import './BodySectionWithMarginBottom.css'
 
 
+const styles = StyleSheet.create({
+    sectionMargin: {
+        marginBottom: '40px',
+    }
+})
 
 class BodySectionWithMarginBottom extends React.Component {
     constructor(props) {
@@ -11,8 +16,8 @@ class BodySectionWithMarginBottom extends React.Component {
     }
     render() {
         return (
-            <div className="bodySectionWithMargin">
-                <BodySection {...this.props}/>
+            <div className={css(styles.sectionMargin)}>
+                <BodySection {...this.props} />
             </div>
         )
     }

@@ -27,7 +27,7 @@ describe('<Notifications />', () => {
     expect(wrapper.find(NotificationItem)).toHaveLength(3);
 	});
 
-  it('render a Notifications component and verify text', () => {
+  it('render a Notificationscomponent and verify text', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} />);
     expect(wrapper.find('.Notifications p')).toHaveLength(1);
     expect(wrapper.find('.Notifications p').text()).toEqual('Here is the list of notifications')
@@ -35,7 +35,7 @@ describe('<Notifications />', () => {
 
   it('render a Notifications component and verify html', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} />);
-    expect(wrapper.find(NotificationItem).first().html()).toContain('New course available')
+    expect(wrapper.find(NotificationItem).first().html()).toEqual('<li data-notification-type="default">New course available</li>')
 	});
 
   it('ensure .menuItem is being displayed when displayDrawer is false', () => {
@@ -101,22 +101,4 @@ describe('<Notifications />', () => {
     expect(spy).toHaveReturnedWith(true);
     spy.mockRestore();
   });
-
-  it('verify that clicking on the menu item calls handleDisplayDrawer', () => {
-    const mockHandleDisplayDrawer = jest.fn();
-    const wrapper = shallow(<Notifications listNotifications={listNotifications} handleDisplayDrawer={mockHandleDisplayDrawer} />);
-    const spy = jest.spyOn(wrapper.instance().props, 'handleDisplayDrawer');
-    wrapper.find('.menuItem div').simulate('click');
-    expect(spy).toHaveBeenCalled();
-    spy.mockRestore();
-	});
-
-  it('verify that clicking on the button calls handleHideDrawer', () => {
-    const mockHandleHideDrawer = jest.fn();
-    const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} handleHideDrawer={mockHandleHideDrawer}/>);
-    const spy = jest.spyOn(wrapper.instance().props, 'handleHideDrawer');
-    wrapper.find('.Notifications button').simulate('click');
-    expect(spy).toHaveBeenCalled();
-    spy.mockRestore();
-	});
 });

@@ -1,6 +1,13 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from "react";
 import { shallow } from "enzyme";
 import Header from "./Header";
+import { StyleSheetTestUtils } from 'aphrodite';
+
+StyleSheetTestUtils.suppressStyleInjection();
 
 describe("<Header />", () => {
   it("Header renders without any errors", () => {
@@ -10,11 +17,11 @@ describe("<Header />", () => {
 
   it("Verify that the components render img", () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper.find("div.App-header img")).toHaveLength(1);
+    expect(wrapper.find("header img")).toHaveLength(1);
   });
 
   it("Verify that the components render h1 tag", () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper.find("div.App-header h1")).toHaveLength(1);
+    expect(wrapper.find("header h1")).toHaveLength(1);
   });
 })
