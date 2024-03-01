@@ -22,6 +22,7 @@
     "css-loader": "^5.2.6",
     "file-loader": "^6.2.0",
     "image-webpack-loader": "^7.0.1",
+    "immutable": "*",
     "jest": "^27.0.6",
     "normalizr": "^3.6.1",
     "prop-types": "^15.7.2",
